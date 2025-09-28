@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>User</title>
+</head>
+    <h4>Hola mundo desde un archivo HTML y un user</h4>
+    <h3>{{ name }}</h3>
+    <p> {{ age }}</p>
+
+    {% if age > 18 %}
+        <p>Es mayor de edad</p>
+    {% endif %}
+
+    {% for item in list %}
+    <p>{{ item }}</p>
+    {% endfor %}
+
+</html>
