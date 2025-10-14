@@ -1,0 +1,26 @@
+-- Crear Base de Datos BDFinal_Cinepolis
+-- Autor: Adrian Ernesto Germán Becerra.
+
+CREATE DATABASE BDFinal_Cinepolis
+ON
+
+
+(NAME= N'BDFinal_Cinepolis', FILENAME=N'C:\BaseDatosCINE_Adrian\BDFinal_Cinepolis_Data.mdf')
+LOG ON
+
+(NAME= N'BDFinal_Cinepolis_Log', FILENAME=N'C:\BaseDatosCINE_Adrian\BDFinal_Cinepolis_Log.ldf')
+GO
+
+
+
+
+-- Crear ESQUEMAS de la Base De Datos BDFinal_Cinepolis
+-- Autor: Adrian Ernesto Germán Becerra.
+
+USE BDFinal_Cinepolis
+GO
+
+CREATE SCHEMA Personas
+GO
+CREATE SCHEMA Proyeccion
+GO

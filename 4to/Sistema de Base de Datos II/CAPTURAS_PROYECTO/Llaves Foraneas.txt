@@ -1,0 +1,114 @@
+-- Crear LLAVES FORANEAS de la Base De Datos BDFinal_Cinepolis
+-- Autor: Adrian Ernesto Germán Becerra.
+
+USE BDFinal_Cinepolis
+GO
+
+ALTER TABLE Personas.frases
+ADD CONSTRAINT 
+[FK_frases_actores_id_actor]
+FOREIGN KEY (id_actor)
+REFERENCES Personas.actores(id_actor)
+GO
+
+
+ALTER TABLE Personas.frases
+ADD CONSTRAINT 
+[FK_frases_peliculas_id_pelicula]
+FOREIGN KEY (id_pelicula)
+REFERENCES Proyeccion.peliculas(id_pelicula)
+GO
+
+
+
+
+
+
+
+ALTER TABLE Proyeccion.peliculas
+ADD CONSTRAINT 
+[FK_peliculas_companias_id_pelicula]
+FOREIGN KEY (id_compania)
+REFERENCES Proyeccion.compania(id_compania)
+GO
+
+
+
+
+
+
+
+
+
+ALTER TABLE Personas.Peliculas_actores
+ADD CONSTRAINT 
+[FK_peliculas_actores_id_pelicula]
+FOREIGN KEY (id_pelicula)
+REFERENCES Proyeccion.peliculas(id_pelicula)
+GO
+
+ALTER TABLE Personas.Peliculas_actores
+ADD CONSTRAINT 
+[FK_peliculas_actores_id_actor]
+FOREIGN KEY (id_actor)
+REFERENCES Personas.actores(id_actor)
+GO
+
+
+
+
+
+
+
+
+
+
+
+
+ALTER TABLE Proyeccion.Peliculas_directores
+ADD CONSTRAINT 
+[FK_peliculas_directores_id_pelicula]
+FOREIGN KEY (id_pelicula)
+REFERENCES Proyeccion.peliculas(id_pelicula)
+GO
+
+
+ALTER TABLE Proyeccion.Peliculas_directores
+ADD CONSTRAINT 
+[FK_peliculas_directores_id_director]
+FOREIGN KEY (id_director)
+REFERENCES Personas.directores(id_director)
+GO
+
+
+
+
+
+
+
+
+
+
+USE BDFinal_Cinepolis
+GO
+
+ALTER TABLE Proyeccion.Peliculas_generos
+ADD CONSTRAINT 
+[FK_peliculas_generos_id_pelicula]
+FOREIGN KEY (id_pelicula)
+REFERENCES Proyeccion.peliculas(id_pelicula)
+GO
+
+
+ALTER TABLE Proyeccion.Peliculas_generos
+ADD CONSTRAINT 
+[FK_peliculas_generos_id_genero]
+FOREIGN KEY (id_genero)
+REFERENCES Proyeccion.genero(id_genero)
+GO
+
+
+
+
+
+

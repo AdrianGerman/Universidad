@@ -1,0 +1,137 @@
+-- Crear vistas en la Base De Datos BDFinal_Cinepolis
+-- Autor: Adrian Ernesto Germán Becerra.
+
+Use BDFinal_Cinepolis
+GO
+
+CREATE VIEW Personas.vTablaActores
+AS
+SELECT * FROM Personas.actores
+GO
+
+-- Codigo para ver la vista
+SELECT * FROM Personas.vTablaActores
+GO
+
+
+
+
+CREATE VIEW Personas.vTablaFrases
+AS
+SELECT * FROM Personas.frases
+GO
+
+-- Codigo para ver la vista
+SELECT * FROM Personas.vTablaFrases
+GO
+
+
+
+
+
+
+CREATE VIEW Personas.vTablaDirectores
+AS
+SELECT * FROM Personas.directores
+GO
+
+-- Codigo para ver la vista
+SELECT * FROM Personas.vTablaDirectores
+GO
+
+
+
+
+
+CREATE VIEW Proyeccion.vTablaCompanias
+AS
+SELECT * FROM Proyeccion.companias
+GO
+
+-- Codigo para ver la vista
+SELECT * FROM Proyeccion.vTablaCompanias
+GO
+
+
+
+
+
+
+
+CREATE VIEW Proyeccion.vTablaPeliculas
+AS
+SELECT * FROM Proyeccion.peliculas
+GO
+
+-- Codigo para ver la vista
+SELECT * FROM Proyeccion.vTablaPeliculas
+GO
+
+
+
+
+
+CREATE VIEW Proyeccion.vTablaGenero
+AS
+SELECT * FROM Proyeccion.genero
+GO
+
+-- Codigo para ver la vista
+SELECT * FROM Proyeccion.vTablaGenero
+GO
+
+
+
+
+
+
+CREATE VIEW Personas.vTablaPeliculas_actores
+AS
+SELECT * FROM Personas.Peliculas_actores
+GO
+
+-- Codigo para ver la vista
+SELECT * FROM Personas.vTablaPeliculas_actores
+GO
+
+
+
+
+
+
+
+
+
+CREATE VIEW Proyeccion.vTablaPeliculas_generos
+AS
+SELECT * FROM Proyeccion.Peliculas_generos
+GO
+
+-- Codigo para ver la vista
+SELECT * FROM Proyeccion.vTablaPeliculas_generos
+GO
+
+
+
+
+
+
+
+CREATE VIEW Proyeccion.vTablaPeliculasxCartelera
+AS
+SELECT 
+p.titulo as Titulo, p.sinopsis as Sinopsis, p.longitudMinutos
+as Duracion, g.nombre as Genero, c.nombre as Productora
+FROM Proyeccion.Peliculas_generos pg
+ INNER JOIN Proyeccion.peliculas p 
+ON p.id_pelicula = pg.id_pelicula
+ INNER JOIN Proyeccion.genero g
+ON pg.id_genero = g.id_genero
+INNER JOIN Proyeccion.companias c
+ON c.id_compania = p.id_compania
+GO
+
+-- Codigo para ver la vista
+SELECT * FROM Proyeccion.vTablaPeliculasxCartelera
+GO
+

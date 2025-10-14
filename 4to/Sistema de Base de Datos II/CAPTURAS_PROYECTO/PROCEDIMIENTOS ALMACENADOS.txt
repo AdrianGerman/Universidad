@@ -1,0 +1,220 @@
+-- Crear Procedimientos Almacenados en la Base De Datos BDFinal_Cinepolis
+-- Autor: Adrian Ernesto Germán Becerra.
+
+Use BDFinal_Cinepolis
+GO
+
+-- Procedimiento para tabla Actores
+
+CREATE PROCEDURE Personas.AddActores
+ @nombre nvarchar(50),
+ @fechaNacimiento datetime
+AS
+ BEGIN TRY
+INSERT INTO Personas.actores(nombre,fechaNacimiento)
+VALUES (@nombre, @fechaNacimiento)
+END TRY
+
+BEGIN CATCH
+ SELECT ERROR_NUMBER(), ERROR_MESSAGE()
+END CATCH
+GO
+
+
+
+
+
+-- Procedimiento para tabla Actores
+
+CREATE PROCEDURE Personas.AddFrases
+ @id_actor int,
+ @id_pelicula int,
+ @frase nvarchar(150)
+AS
+ BEGIN TRY
+INSERT INTO Personas.frases(id_actor, id_pelicula, frase)
+VALUES (@id_actor, @id_pelicula, @frase)
+END TRY
+
+BEGIN CATCH
+ SELECT ERROR_NUMBER(), ERROR_MESSAGE()
+END CATCH
+GO
+
+
+
+
+
+
+
+
+
+
+-- Procedimiento para tabla Directores
+
+CREATE PROCEDURE Personas.AddDirectores
+ @nombre nvarchar(50),
+ @fechaNacimiento datetime
+AS
+ BEGIN TRY
+INSERT INTO Personas.directores(nombre,fechaNacimiento)
+VALUES (@nombre, @fechaNacimiento)
+END TRY
+
+BEGIN CATCH
+ SELECT ERROR_NUMBER(), ERROR_MESSAGE()
+END CATCH
+GO
+
+
+
+
+
+-- Procedimiento para tabla Compañias
+
+CREATE PROCEDURE Proyeccion.AddCompanias
+ @nombre nvarchar(50),
+ @direccion nvarchar(40)
+AS
+ BEGIN TRY
+INSERT INTO Proyeccion.companias(nombre, direccion)
+VALUES (@nombre, @direccion)
+END TRY
+
+BEGIN CATCH
+ SELECT ERROR_NUMBER(), ERROR_MESSAGE()
+END CATCH
+GO
+
+
+
+
+
+
+
+
+
+
+
+-- Procedimiento para tabla Peliculas
+
+CREATE PROCEDURE Proyeccion.AddPeliculas
+ @titulo nvarchar(50),
+ @anoLanzamiento int,
+ @longitudMinutos int,
+ @sinopsis nvarchar (200)
+AS
+ BEGIN TRY
+INSERT INTO Proyeccion.peliculas(titulo, anoLanzamiento, longitudMinutos, sinopsis)
+VALUES (@titulo, @anoLanzamiento, @longitudMinutos, @sinopsis)
+END TRY
+
+BEGIN CATCH
+ SELECT ERROR_NUMBER(), ERROR_MESSAGE()
+END CATCH
+GO
+
+
+
+
+
+
+
+
+
+-- Procedimiento para tabla Genero
+
+CREATE PROCEDURE Proyeccion.AddGenero
+ @nombre nvarchar(50)
+AS
+ BEGIN TRY
+INSERT INTO Proyeccion.genero(nombre)
+VALUES (@nombre)
+END TRY
+
+BEGIN CATCH
+ SELECT ERROR_NUMBER(), ERROR_MESSAGE()
+END CATCH
+GO
+
+
+
+
+
+
+
+No pase usuarios, pero es el mismo pex
+
+
+
+
+
+
+
+
+-- Procedimiento para tabla Peliculas_actores
+
+CREATE PROCEDURE Personas.AddPeliculas_actores
+ @id_pelicula int,
+ @id_actor int
+AS
+ BEGIN TRY
+INSERT INTO Personas.Peliculas_actores(id_pelicula, id_actor)
+VALUES (@id_pelicula, @id_actor)
+END TRY
+
+BEGIN CATCH
+ SELECT ERROR_NUMBER(), ERROR_MESSAGE()
+END CATCH
+GO
+
+
+
+
+
+
+
+
+
+
+-- Procedimiento para tabla Peliculas_generos
+
+CREATE PROCEDURE Proyeccion.AddPeliculas_generos
+ @id_pelicula int,
+ @id_genero int
+AS
+ BEGIN TRY
+INSERT INTO Proyeccion.Peliculas_generos(id_pelicula, id_genero)
+VALUES (@id_pelicula, @id_genero)
+END TRY
+
+BEGIN CATCH
+ SELECT ERROR_NUMBER(), ERROR_MESSAGE()
+END CATCH
+GO
+
+
+
+
+
+
+
+-- Procedimiento para tabla Peliculas_directores
+
+CREATE PROCEDURE Proyeccion.AddPeliculas_directores
+ @id_pelicula int,
+ @id_director int
+AS
+ BEGIN TRY
+INSERT INTO Proyeccion.Peliculas_directores(id_pelicula, id_director)
+VALUES (@id_pelicula, @id_director)
+END TRY
+
+BEGIN CATCH
+ SELECT ERROR_NUMBER(), ERROR_MESSAGE()
+END CATCH
+GO
+
+
+
+

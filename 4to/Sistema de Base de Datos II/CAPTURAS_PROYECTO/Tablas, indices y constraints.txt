@@ -1,0 +1,337 @@
+-- Crear TABLAS de la Base De Datos BDFinal_Cinepolis
+-- Autor: Adrian Ernesto Germán Becerra.
+
+USE BDFinal_Cinepolis
+GO
+
+CREATE TABLE Personas.actores
+(id_actor int IDENTITY (1,1) NOT NULL,
+ nombre nvarchar (50) NOT NULL,
+ fechaNacimiento datetime NOT NULL)
+GO
+
+
+
+USE BDFinal_Cinepolis
+GO
+
+CREATE TABLE Personas.frases
+(id_frase int IDENTITY (1,1) NOT NULL,
+ id_actor int NOT NULL,
+ id_pelicula int NOT NULL,
+ frase nvarchar (50) NOT NULL)
+GO
+
+
+
+USE BDFinal_Cinepolis
+GO
+
+CREATE TABLE Personas.directores
+(id_director int IDENTITY (1,1) NOT NULL,
+ nombre nvarchar (50) NOT NULL,
+ fechaNacimiento datetime NOT NULL)
+GO
+
+
+
+USE BDFinal_Cinepolis
+GO
+
+CREATE TABLE Personas.Peliculas_actores
+(id_pelicula int NOT NULL,
+ id_actor int NOT NULL)
+GO
+
+
+
+USE BDFinal_Cinepolis
+GO
+
+CREATE TABLE Proyeccion.companias
+(id_compania int IDENTITY (1,1) NOT NULL,
+ nombre nvarchar (50) NOT NULL,
+ direccion nvarchar (40) NOT NULL)
+GO
+
+
+
+USE BDFinal_Cinepolis
+GO
+
+CREATE TABLE Proyeccion.peliculas
+(id_pelicula int IDENTITY (1,1) NOT NULL,
+ titulo nvarchar (50) NOT NULL,
+ anoLanzamiento int NOT NULL,
+ longitudMinutos int NOT NULL,
+ sinopsis nvarchar (80) NOT NULL,
+ id_compania int NOT NULL)
+GO
+
+
+
+USE BDFinal_Cinepolis
+GO
+
+CREATE TABLE Proyeccion.genero
+(id_genero int IDENTITY (1,1) NOT NULL,
+ nombre nvarchar (50) NOT NULL)
+GO
+
+
+
+
+USE BDFinal_Cinepolis
+GO
+
+CREATE TABLE Proyeccion.Peliculas_generos
+(id_pelicula int NOT NULL,
+ id_genero int NOT NULL)
+GO
+
+
+
+USE BDFinal_Cinepolis
+GO
+
+CREATE TABLE Proyeccion.Peliculas_directores
+(id_pelicula int NOT NULL,
+ id_director int NOT NULL)
+GO
+
+
+USE BDFinal_Cinepolis
+GO
+
+CREATE TABLE Personas.usuarios
+(id_usuario int IDENTITY (1,1) NOT NULL,
+ nombre nvarchar (60) NOT NULL,
+ apellido nvarchar (60) NOT NULL,
+ usuario nvarchar (50) NOT NULL,
+ contraseña int NOT NULL)
+GO
+
+
+
+
+-- Crear INDICES Y CONSTRAINTS de la Base De Datos BDFinal_Cinepolis
+-- Autor: Adrian Ernesto Germán Becerra.
+
+--Para la tabla ACTORES
+
+-- Indice CLUSTERED
+CREATE UNIQUE CLUSTERED INDEX IX_actores_nombre
+ON Personas.actores (nombre)
+GO
+
+-- Indices NON_CLUSTERED
+CREATE NONCLUSTERED INDEX IX_actores_fechaNacimiento
+ON Personas.actores (fechaNacimiento)
+GO
+
+-- Llave Primaria
+ALTER TABLE Personas.actores
+ADD CONSTRAINT
+[PK_actores_id_actor]
+PRIMARY KEY (id_actor)
+GO
+
+-- CONSTRAINT tipo DEFAULT
+ALTER TABLE Personas.actores
+ADD CONSTRAINT [DF_actores_nombre]
+DEFAULT 'Anominous'
+FOR nombre
+GO
+
+
+
+
+
+
+--Para la tabla FRASES
+
+-- Indice CLUSTERED
+CREATE UNIQUE CLUSTERED INDEX IX_frases_frase
+ON Personas.frases (frase)
+GO
+
+-- Indices NON_CLUSTERED
+CREATE NONCLUSTERED INDEX IX_frases_id_actor
+ON Personas.frases (id_actor)
+GO
+
+-- Llave Primaria
+ALTER TABLE Personas.frases
+ADD CONSTRAINT
+[PK_frases_id_frase]
+PRIMARY KEY (id_frase)
+GO
+
+-- CONSTRAINT tipo DEFAULT
+ALTER TABLE Personas.frases
+ADD CONSTRAINT [DF_frases_frase]
+DEFAULT 'UnaFrase'
+FOR frase
+GO
+
+
+
+
+
+
+--Para la tabla DIRECTORES
+
+-- Indice CLUSTERED
+CREATE UNIQUE CLUSTERED INDEX IX_directores_nombre
+ON Personas.directores (nombre)
+GO
+
+-- Indices NON_CLUSTERED
+CREATE NONCLUSTERED INDEX IX_directores_fechaNacimiento
+ON Personas.directores (fechaNacimiento)
+GO
+
+-- Llave Primaria
+ALTER TABLE Personas.directores
+ADD CONSTRAINT
+[PK_directores_id_director]
+PRIMARY KEY (id_director)
+GO
+
+-- CONSTRAINT tipo DEFAULT
+ALTER TABLE Personas.directores
+ADD CONSTRAINT [DF_directores_nombre]
+DEFAULT 'Anonimous'
+FOR nombre
+GO
+
+
+
+
+
+-- Para la tabla COMPAÑIAS
+
+-- Indice CLUSTERED
+CREATE UNIQUE CLUSTERED INDEX IX_companias_nombre
+ON Proyeccion.companias (nombre)
+GO
+
+-- Indices NON_CLUSTERED
+CREATE NONCLUSTERED INDEX IX_companias_direccion
+ON Proyeccion.companias (direccion)
+GO
+
+-- Llave Primaria
+ALTER TABLE Proyeccion.companias
+ADD CONSTRAINT
+[PK_companias_id_compania]
+PRIMARY KEY (id_compania)
+GO
+
+-- CONSTRAINT tipo DEFAULT
+ALTER TABLE Proyeccion.companias
+ADD CONSTRAINT [DF_companias_nombre]
+DEFAULT 'Anonimous'
+FOR nombre
+GO
+
+
+
+
+
+
+
+
+-- Para la tabla PELICULAS
+
+-- Indice CLUSTERED
+CREATE UNIQUE CLUSTERED INDEX IX_peliculas_titulo
+ON Proyeccion.peliculas (titulo)
+GO
+
+-- Indices NON_CLUSTERED
+CREATE NONCLUSTERED INDEX IX_peliculas_anoLanzamiento
+ON Proyeccion.peliculas (anoLanzamiento)
+GO
+
+-- Llave Primaria
+ALTER TABLE Proyeccion.peliculas
+ADD CONSTRAINT
+[PK_peliculas_id_peliculas]
+PRIMARY KEY (id_peliculas)
+GO
+
+-- CONSTRAINT tipo DEFAULT
+ALTER TABLE Proyeccion.peliculas
+ADD CONSTRAINT [DF_peliculas_titulo]
+DEFAULT 'SinTitulo'
+FOR titulo
+GO
+
+
+
+
+
+
+
+-- Para la tabla GENERO
+
+-- Indice CLUSTERED
+CREATE UNIQUE CLUSTERED INDEX IX_genero_nombre
+ON Proyeccion.genero (nombre)
+GO
+
+-- Indices NON_CLUSTERED
+CREATE NONCLUSTERED INDEX IX_genero_id_genero
+ON Proyeccion.genero (id_genero)
+GO
+
+-- Llave Primaria
+ALTER TABLE Proyeccion.genero
+ADD CONSTRAINT
+[PK_genero_id_genero]
+PRIMARY KEY (id_genero)
+GO
+
+-- CONSTRAINT tipo DEFAULT
+ALTER TABLE Proyeccion.genero
+ADD CONSTRAINT [DF_genero_nombre]
+DEFAULT 'Anonimous'
+FOR nombre
+GO
+
+
+
+
+
+
+
+
+-- Para la tabla USUARIOS
+
+-- Indice CLUSTERED
+CREATE UNIQUE CLUSTERED INDEX IX_usuarios_nombre
+ON Personas.usuarios (nombre)
+GO
+
+-- Indices NON_CLUSTERED
+CREATE NONCLUSTERED INDEX IX_usuarios_apellido
+ON Personas.usuarios (apellido)
+GO
+
+-- Llave Primaria
+ALTER TABLE Personas.usuarios
+ADD CONSTRAINT
+[PK_usuarios_id_usuario]
+PRIMARY KEY (id_usuario)
+GO
+
+-- CONSTRAINT tipo DEFAULT
+ALTER TABLE Personas.usuarios
+ADD CONSTRAINT [DF_usuarios_nombre]
+DEFAULT 'Anonimous'
+FOR nombre
+GO
+
+
+

@@ -1,0 +1,716 @@
+-- Insetar datos en las tablas de la Base De Datos BDFinal_Cinepolis
+-- Autor: Adrian Ernesto Germán Becerra.
+
+USE BDFinal_Cinepolis
+GO
+
+-- Tabla Actores
+
+INSERT INTO Personas.actores
+(nombre, fechaNacimiento)
+VALUES
+('Robert Downey Jr.','04/04/1965')
+GO
+
+INSERT INTO Personas.actores
+(nombre, fechaNacimiento)
+VALUES
+('David Kenneth Harbour','11/04/1975')
+GO
+
+INSERT INTO Personas.actores
+(nombre, fechaNacimiento)
+VALUES
+('Will Smith','25/09/1968')
+GO
+
+INSERT INTO Personas.actores
+(nombre, fechaNacimiento)
+VALUES
+('Alex Lawther','04/05/1995')
+GO
+
+INSERT INTO Personas.actores
+(nombre, fechaNacimiento)
+VALUES
+('Benedict Cumberbatch','19/07/1976')
+GO
+
+INSERT INTO Personas.actores
+(nombre, fechaNacimiento)
+VALUES
+('Tom Hiddleston','09/02/1981')
+GO
+
+INSERT INTO Personas.actores
+(nombre, fechaNacimiento)
+VALUES
+('Chris Evans','09/02/1981')
+GO
+
+INSERT INTO Personas.actores
+(nombre, fechaNacimiento)
+VALUES
+('Tom Holland','13/06/1981')
+GO
+
+INSERT INTO Personas.actores
+(nombre, fechaNacimiento)
+VALUES
+('Elizabeth Olsen','16/02/1989')
+GO
+
+INSERT INTO Personas.actores
+(nombre, fechaNacimiento)
+VALUES
+('Chris Hemsworth','11/08/1983')
+GO 
+
+
+USE BDFinal_Cinepolis
+GO
+
+
+
+-- Tabla Directores
+
+INSERT INTO Personas.directores
+(nombre, fechaNacimiento)
+VALUES
+('Christopher Nolan','30/07/1970')
+GO
+
+INSERT INTO Personas.directores
+(nombre, fechaNacimiento)
+VALUES
+('Steven Spielberg','18/12/1946')
+GO
+
+INSERT INTO Personas.directores
+(nombre, fechaNacimiento)
+VALUES
+('Martin Scorsese','17/11/1942')
+GO
+
+INSERT INTO Personas.directores
+(nombre, fechaNacimiento)
+VALUES
+('Stanley Kubrick','26/07/1928')
+GO
+
+INSERT INTO Personas.directores
+(nombre, fechaNacimiento)
+VALUES
+('Alfred Hitchcock','13/08/1899')
+GO
+
+INSERT INTO Personas.directores
+(nombre, fechaNacimiento)
+VALUES
+('Hayao Miyazaki','05/01/1941')
+GO
+
+INSERT INTO Personas.directores
+(nombre, fechaNacimiento)
+VALUES
+('Charles Chaplin','16/04/1889')
+GO
+
+INSERT INTO Personas.directores
+(nombre, fechaNacimiento)
+VALUES
+('Akira Kurosawa','23/03/1910')
+GO
+
+INSERT INTO Personas.directores
+(nombre, fechaNacimiento)
+VALUES
+('Quentin Tarantino','27/03/1963')
+GO
+
+INSERT INTO Personas.directores
+(nombre, fechaNacimiento)
+VALUES
+('Guillermo del Toro','09/10/1964')
+GO
+
+
+
+-- Tabla Compañias
+
+
+USE BDFinal_Cinepolis
+GO
+
+INSERT INTO Proyeccion.companias
+(nombre, direccion)
+VALUES
+('Columbia Pictures','Los Ángeles, California, Estados Unidos')
+GO
+
+INSERT INTO Proyeccion.companias
+(nombre, direccion)
+VALUES
+('20th Century-Fox','Los Ángeles, California, Estados Unidos')
+GO
+
+INSERT INTO Proyeccion.companias
+(nombre, direccion)
+VALUES
+('Warner Bros','Hollywood, Los Ángeles')
+GO
+
+INSERT INTO Proyeccion.companias
+(nombre, direccion)
+VALUES
+('Paramount Pictures','5555 Melrose Ave')
+GO
+
+INSERT INTO Proyeccion.companias
+(nombre, direccion)
+VALUES
+('Universal Studios', 'Universal City, California')
+GO
+
+INSERT INTO Proyeccion.companias
+(nombre, direccion)
+VALUES
+('Disney','Los Angeles, California')
+GO
+
+INSERT INTO Proyeccion.companias
+(nombre, direccion)
+VALUES
+('Sony', 'Nihonbashi, ciudad de Tokio, Japon')
+GO
+
+INSERT INTO Proyeccion.companias
+(nombre, direccion)
+VALUES
+('Metro–Goldwyn–Mayer', 'Beverly Hills, Estados Unidos')
+GO
+
+INSERT INTO Proyeccion.companias
+(nombre, direccion)
+VALUES
+('United Artists', 'Los Ángeles, California')
+GO
+
+INSERT INTO Proyeccion.companias
+(nombre, direccion)
+VALUES
+('RKO Radio Pictures', 'California, Estados Unidos')
+GO
+
+
+
+
+
+
+-- Tabla Genero
+
+
+USE BDFinal_Cinepolis
+GO
+
+INSERT INTO Proyeccion.genero
+(nombre)
+VALUES
+('Ciencia ficcion')
+GO
+
+INSERT INTO Proyeccion.genero
+(nombre)
+VALUES
+('Drama')
+GO
+
+INSERT INTO Proyeccion.genero
+(nombre)
+VALUES
+('Terror')
+GO
+
+INSERT INTO Proyeccion.genero
+(nombre)
+VALUES
+('Suspenso')
+GO
+
+INSERT INTO Proyeccion.genero
+(nombre)
+VALUES
+('Accion')
+GO
+
+INSERT INTO Proyeccion.genero
+(nombre)
+VALUES
+('Infantil')
+GO
+
+INSERT INTO Proyeccion.genero
+(nombre)
+VALUES
+('Fantasia')
+GO
+
+INSERT INTO Proyeccion.genero
+(nombre)
+VALUES
+('Documental')
+GO
+
+INSERT INTO Proyeccion.genero
+(nombre)
+VALUES
+('Aventura')
+GO
+
+INSERT INTO Proyeccion.genero
+(nombre)
+VALUES
+('Romatico')
+GO
+
+
+
+
+
+-- Tabla Usuarios
+
+INSERT INTO Personas.usuarios
+(nombre, apellido, usuario, contraseña)
+VALUES
+('Adrian', 'German', 'Geradd', 'qwerty')
+GO
+
+INSERT INTO Personas.usuarios
+(nombre, apellido, usuario, contraseña)
+VALUES
+('Ernesto', 'Becerra', 'Becern', 'hola123')
+GO
+
+INSERT INTO Personas.usuarios
+(nombre, apellido, usuario, contraseña)
+VALUES
+('Adriana', 'Lopez', 'Hetzi', 'qwerty')
+GO
+
+INSERT INTO Personas.usuarios
+(nombre, apellido, usuario, contraseña)
+VALUES
+('Natalia', 'Ballardo', 'Linher', 'hola123')
+GO
+
+INSERT INTO Personas.usuarios
+(nombre, apellido, usuario, contraseña)
+VALUES
+('Pedro', 'Omelinger', 'Pom', 'qwerty')
+GO
+
+INSERT INTO Personas.usuarios
+(nombre, apellido, usuario, contraseña)
+VALUES
+('Alfredo', 'Pañuelas', 'Buscas','hola123')
+GO
+
+INSERT INTO Personas.usuarios
+(nombre, apellido, usuario, contraseña)
+VALUES
+('Gerard', 'Vangenace', 'Treehed', 'qwerty')
+GO
+
+INSERT INTO Personas.usuarios
+(nombre, apellido, usuario, contraseña)
+VALUES
+('Yamiel', 'Rubogid', 'Darkes', 'hola123')
+GO
+
+INSERT INTO Personas.usuarios
+(nombre, apellido, usuario, contraseña)
+VALUES
+('Fernando', 'Aro', 'Killast', 'qwerty')
+GO
+
+INSERT INTO Personas.usuarios
+(nombre, apellido, usuario, contraseña)
+VALUES
+('Jonatan', 'Rubencilla', 'Jhonyky', 'hola123')
+GO
+
+
+
+
+
+
+
+-- Tabla Peliculas
+
+
+USE BDFinal_Cinepolis
+GO
+
+INSERT INTO Proyeccion.peliculas
+(titulo, anoLanzamiento, longitudMinutos, sinopsis, id_compañia)
+VALUES
+('Los cazafantasmas', 1984, 104, 'Los fantasmas existen. Muchas veces los espíritus quedan atrapados en este mundo, 1)
+GO
+
+INSERT INTO Proyeccion.peliculas
+(titulo, anoLanzamiento, longitudMinutos, sinopsis, id_compañia)
+VALUES
+('La terminal', 2004, 128, 'Incapaz de entrar a los Estados Unidos, un europeo vive en aeropuerto', 2)
+GO
+
+INSERT INTO Proyeccion.peliculas
+(titulo, anoLanzamiento, longitudMinutos, sinopsis, id_compañia)
+VALUES
+('El origen', 2010, 162, 'Dom Cobb es un ladrón con una extraña habilidad para entrar a los sueños de la gente y robarles los secretos de sus subconscientes', 3)
+GO
+
+INSERT INTO Proyeccion.peliculas
+(titulo, anoLanzamiento, longitudMinutos, sinopsis, id_compañia)
+VALUES
+('Un lugar en silecio', 2018, 216, 'Unas criaturas que detectan el sonido han extingido la raza humana, shhhh y sobrevive', 4)
+GO
+
+INSERT INTO Proyeccion.peliculas
+(titulo, anoLanzamiento, longitudMinutos, sinopsis, id_compañia)
+VALUES
+('Jurassic World', 2018, 130, 'No es una historia mas de dinosaurios', 5)
+GO
+
+INSERT INTO Proyeccion.peliculas
+(titulo, anoLanzamiento, longitudMinutos, sinopsis, id_compañia)
+VALUES
+('Un gran dinosaurio', 2015, 100, 'Arlo termina fuera de su hogar despues de una tomenta ahora debe sobrevivir', 6)
+GO
+
+INSERT INTO Proyeccion.peliculas
+(titulo, anoLanzamiento, longitudMinutos, sinopsis, id_compañia)
+VALUES
+('Escalofrios', 2015, 103, 'Zach descubre un libro que toma vida sus personajes ten cuidado', 7)
+GO
+
+INSERT INTO Proyeccion.peliculas
+(titulo, anoLanzamiento, longitudMinutos, sinopsis, id_compañia)
+VALUES
+('El hobbit', 2012, 182, 'Una aventura en otro mundo para recuperar el reino', 8)
+GO
+
+INSERT INTO Proyeccion.peliculas
+(titulo, anoLanzamiento, longitudMinutos, sinopsis, id_compañia)
+VALUES
+('Valkyrie', 2012, 124, 'El Coronel Claus von Stauffenberg teme que Hitler pueda destruir su amada Alemania', 9)
+GO
+
+INSERT INTO Proyeccion.peliculas
+(titulo, anoLanzamiento, longitudMinutos, sinopsis, id_compañia)
+VALUES
+('El gran gorila', 1949, 94, 'Una joven cándida, su gorila gigante y un promotor confabulador son una sensación en un club nocturno', 10)
+GO
+
+
+
+
+
+
+-- Tabla Frases
+
+INSERT INTO Personas.frases
+(id_actor, id_pelicula, frase)
+VALUES
+(22, 1, 'Un heroe salva a todos')
+GO
+
+INSERT INTO Personas.frases
+(id_actor, id_pelicula, frase)
+VALUES
+(23, 2, 'Medicina para gatu')
+GO
+
+INSERT INTO Personas.frases
+(id_actor, id_pelicula, frase)
+VALUES
+(24, 5, 'El sueño lo es todo')
+GO
+
+INSERT INTO Personas.frases
+(id_actor, id_pelicula, frase)
+VALUES
+(25, 6, 'Calla y sobreviviras')
+GO
+
+
+INSERT INTO Personas.frases
+(id_actor, id_pelicula, frase)
+VALUES
+(26, 7, 'Este mundo es magnifico')
+GO
+
+INSERT INTO Personas.frases
+(id_actor, id_pelicula, frase)
+VALUES
+(27, 8, 'No hay lugar como el hogar')
+GO
+
+INSERT INTO Personas.frases
+(id_actor, id_pelicula, frase)
+VALUES
+(28, 11, 'Las letras tienen mas poder del que creemos')
+GO
+
+
+INSERT INTO Personas.frases
+(id_actor, id_pelicula, frase)
+VALUES
+(29, 12, 'La confianza se gana')
+GO
+
+
+INSERT INTO Personas.frases
+(id_actor, id_pelicula, frase)
+VALUES
+(30, 17, 'loa guerra no es mas que un capricho humano')
+GO
+
+
+INSERT INTO Personas.frases
+(id_actor, id_pelicula, frase)
+VALUES
+(31, 18, 'El amor no tiene fronteras')
+GO
+
+
+
+
+
+
+-- Tabla Peliculas_actores
+
+INSERT INTO Personas.Peliculas_actores
+(id_pelicula, id_actor)
+VALUES
+(1, 22)
+GO
+
+INSERT INTO Personas.Peliculas_actores
+(id_pelicula, id_actor)
+VALUES
+(2, 23)
+GO
+
+INSERT INTO Personas.Peliculas_actores
+(id_pelicula, id_actor)
+VALUES
+(5, 24)
+GO
+
+INSERT INTO Personas.Peliculas_actores
+(id_pelicula, id_actor)
+VALUES
+(6, 25)
+GO
+
+INSERT INTO Personas.Peliculas_actores
+(id_pelicula, id_actor)
+VALUES
+(7, 26)
+GO
+
+INSERT INTO Personas.Peliculas_actores
+(id_pelicula, id_actor)
+VALUES
+(8, 27)
+GO
+
+INSERT INTO Personas.Peliculas_actores
+(id_pelicula, id_actor)
+VALUES
+(11, 28)
+GO
+
+INSERT INTO Personas.Peliculas_actores
+(id_pelicula, id_actor)
+VALUES
+(12, 29)
+GO
+
+INSERT INTO Personas.Peliculas_actores
+(id_pelicula, id_actor)
+VALUES
+(17, 30)
+GO
+
+INSERT INTO Personas.Peliculas_actores
+(id_pelicula, id_actor)
+VALUES
+(18, 31)
+GO
+
+
+
+
+
+-- Tabla Peliculas_directores
+
+INSERT INTO Proyeccion.Peliculas_directores
+(id_pelicula, id_director)
+VALUES
+(1, 1)
+GO
+
+INSERT INTO Proyeccion.Peliculas_directores
+(id_pelicula, id_director)
+VALUES
+(2, 2)
+GO
+
+INSERT INTO Proyeccion.Peliculas_directores
+(id_pelicula, id_director)
+VALUES
+(5, 3)
+GO
+
+INSERT INTO Proyeccion.Peliculas_directores
+(id_pelicula, id_director)
+VALUES
+(6, 4)
+GO
+
+INSERT INTO Proyeccion.Peliculas_directores
+(id_pelicula, id_director)
+VALUES
+(7, 5)
+GO
+
+INSERT INTO Proyeccion.Peliculas_directores
+(id_pelicula, id_director)
+VALUES
+(8, 6)
+GO
+
+INSERT INTO Proyeccion.Peliculas_directores
+(id_pelicula, id_director)
+VALUES
+(11, 7)
+GO
+
+INSERT INTO Proyeccion.Peliculas_directores
+(id_pelicula, id_director)
+VALUES
+(12, 8)
+GO
+
+INSERT INTO Proyeccion.Peliculas_directores
+(id_pelicula, id_director)
+VALUES
+(17, 9)
+GO
+
+INSERT INTO Proyeccion.Peliculas_directores
+(id_pelicula, id_director)
+VALUES
+(18, 10)
+GO
+
+
+
+
+
+-- Tabla Peliculas_generos
+
+INSERT INTO Proyeccion.Peliculas_generos
+(id_pelicula, id_genero)
+VALUES
+(1, 1)
+GO
+
+INSERT INTO Proyeccion.Peliculas_generos
+(id_pelicula, id_genero)
+VALUES
+(2, 2)
+GO
+
+INSERT INTO Proyeccion.Peliculas_generos
+(id_pelicula, id_genero)
+VALUES
+(5, 3)
+GO
+
+INSERT INTO Proyeccion.Peliculas_generos
+(id_pelicula, id_genero)
+VALUES
+(6, 4)
+GO
+
+INSERT INTO Proyeccion.Peliculas_generos
+(id_pelicula, id_genero)
+VALUES
+(7, 5)
+GO
+
+INSERT INTO Proyeccion.Peliculas_generos
+(id_pelicula, id_genero)
+VALUES
+(8, 6)
+GO
+
+INSERT INTO Proyeccion.Peliculas_generos
+(id_pelicula, id_genero)
+VALUES
+(11, 7)
+GO
+
+INSERT INTO Proyeccion.Peliculas_generos
+(id_pelicula, id_genero)
+VALUES
+(12, 8)
+GO
+
+INSERT INTO Proyeccion.Peliculas_generos
+(id_pelicula, id_genero)
+VALUES
+(17, 9)
+GO
+
+INSERT INTO Proyeccion.Peliculas_generos
+(id_pelicula, id_genero)
+VALUES
+(18, 10)
+GO
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
